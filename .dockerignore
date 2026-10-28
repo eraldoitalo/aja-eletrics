@@ -1,0 +1,9 @@
+.venv
+.env
+.git
+.cache
+.tmp
+__pycache__
+staticfiles
+*.zip
+*.xlsx

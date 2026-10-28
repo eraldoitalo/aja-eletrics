@@ -1,0 +1,6 @@
+<nav aria-label="Navegação principal">
+{% if administrative %}<a class="{% if section == 'dashboard' %}active{% endif %}" href="{% url 'dashboard' %}"><svg><use href="#i-grid"/></svg>Visão geral</a>{% endif %}
+{% if commercial %}<a class="{% if section == 'stock' %}active{% endif %}" href="{% url 'vehicles' %}"><svg><use href="#i-bike"/></svg>{% if administrative %}Estoque de motos{% else %}Motos disponíveis{% endif %}</a><a class="{% if section == 'customers' %}active{% endif %}" href="{% url 'customers' %}"><svg><use href="#i-users"/></svg>Clientes</a>{% endif %}
+<a class="{% if section == 'workshop' %}active{% endif %}" href="{% url 'orders' %}"><svg><use href="#i-wrench"/></svg>{% if commercial %}Oficina{% else %}Minhas ordens de serviço{% endif %}</a>
+{% if user.is_superuser %}<a href="{% url 'admin:erp_user_changelist' %}"><svg><use href="#i-users"/></svg>Gerenciar usuários</a>{% endif %}
+</nav>

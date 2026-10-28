@@ -1,0 +1,12 @@
+.venv/
+.env
+.tmp/
+.cache/
+__pycache__/
+*.pyc
+staticfiles/
+media/
+*.sqlite3
+*.xlsx
+*.zip
+test-results/
